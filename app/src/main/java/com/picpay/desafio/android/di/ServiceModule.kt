@@ -1,12 +1,12 @@
 package com.picpay.desafio.android.di
 
-import com.picpay.desafio.android.PicPayService
+import com.picpay.desafio.android.data.network.service.UserService
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
 val serviceModule = module {
-    single { providePicPayService(get()) }
+    single { provideUserService(get()) }
 }
 
-private fun providePicPayService(retrofit: Retrofit): PicPayService =
-    retrofit.create(PicPayService::class.java)
+private fun provideUserService(retrofit: Retrofit): UserService =
+    retrofit.create(UserService::class.java)
