@@ -1,4 +1,4 @@
-package com.picpay.desafio.android.di
+package com.picpay.desafio.android.di.modules
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

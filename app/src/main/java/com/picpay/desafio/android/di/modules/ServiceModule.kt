@@ -1,4 +1,4 @@
-package com.picpay.desafio.android.di
+package com.picpay.desafio.android.di.modules
 
 import com.picpay.desafio.android.data.network.service.UserService
 import org.koin.dsl.module
