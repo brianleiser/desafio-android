@@ -1,4 +1,4 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.presentation
 
 import android.view.View
 import android.widget.ProgressBar
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.picpay.desafio.android.R
 import com.picpay.desafio.android.domain.model.User
 import com.picpay.desafio.android.domain.usecase.GetUsers
 import kotlinx.coroutines.Dispatchers
@@ -14,7 +15,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 
-class MainActivity : AppCompatActivity(R.layout.activity_main) {
+class UserListActivity : AppCompatActivity(R.layout.activity_main) {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             }.onFailure { err: Throwable ->
                 val message = getString(R.string.error)
                 Toast
-                    .makeText(this@MainActivity, message, Toast.LENGTH_SHORT)
+                    .makeText(this@UserListActivity, message, Toast.LENGTH_SHORT)
                     .show()
             }
         }
