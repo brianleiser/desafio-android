@@ -5,5 +5,5 @@ import com.picpay.desafio.android.domain.repository.UserRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    factory <UserRepository>{ UserRepositoryImpl(get()) }
+    factory <UserRepository>{ UserRepositoryImpl(service = get(), userDao = get()) }
 }
