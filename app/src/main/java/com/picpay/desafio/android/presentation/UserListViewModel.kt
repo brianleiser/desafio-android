@@ -24,7 +24,7 @@ class UserListViewModel(private val getUsers: GetUsers) : ViewModel() {
         }
     }
 
-    private suspend fun reduceUsersList() {
+    suspend fun reduceUsersList() {
         getUsers().collect { result ->
             when (result) {
                 is Result.Success -> {
